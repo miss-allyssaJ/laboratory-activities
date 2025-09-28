@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #fce4ec, #e1bee7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.app {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.header {
+  text-align: center;
+  color: #6a1b9a;
+}
+
+.input-box {
+  display: flex;
+  margin: 20px 0;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.input-box button {
+  background: #ec407a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-box button:hover {
+  background: #d81b60;
+}
+
+.progress-container {
+  background: #f3e5f5;
+  border-radius: 20px;
+  height: 12px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: #8e24aa;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  text-align: right;
+  color: #6a1b9a;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tasks {
+  margin-bottom: 25px;
+}
+
+.tasks h2 {
+  color: #8e24aa;
+}
+
+.tasks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tasks li {
+  background: #fce4ec;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks li.completed {
+  background: #dcedc8;
+  color: #33691e;
+}
+
+.buttons button {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+}
+
+button.done { background: #43a047; }
+button.edit { background: #fb8c00; }
+button.delete { background: #e53935; }
+
+.empty {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+}
