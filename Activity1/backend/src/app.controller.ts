@@ -7,6 +7,11 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return this.appService.getHello(); // still works at GET /
+  }
+
+  @Get('api/hello')
+  getApiHello() {
+    return { message: 'Hello from NestJS 🚀' }; // new endpoint at GET /api/hello
   }
 }
