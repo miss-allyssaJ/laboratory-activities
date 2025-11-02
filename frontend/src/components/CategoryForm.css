@@ -1,0 +1,245 @@
+/* ==============================
+   Category Form Styles
+   ============================== */
+
+.bookform-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #2e5e4c;
+  transition: all 0.3s ease;
+  animation: fadeInForm 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeInForm {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==============================
+   Form Title
+   ============================== */
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2e5e4c;
+  margin-bottom: 1.5rem;
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.form-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #b3e8d1, #8dd5b0);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* ==============================
+   Form
+   ============================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ==============================
+   Input Group
+   ============================== */
+
+.input-group {
+  position: relative;
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 0.95rem;
+  border: 2px solid rgba(215, 232, 223, 0.6);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  outline: none;
+  color: #000000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 400;
+}
+
+.input-field::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.input-field:focus {
+  border-color: #3a9d78;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(179, 232, 209, 0.25), 0 4px 12px rgba(58, 157, 120, 0.15);
+  transform: translateY(-1px);
+}
+
+/* ==============================
+   Floating Label
+   ============================== */
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9rem;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0 0.5rem;
+  font-weight: 500;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+  top: 0;
+  left: 0.75rem;
+  font-size: 0.75rem;
+  color: #2e5e4c;
+  font-weight: 600;
+  background: rgba(179, 232, 209, 0.2);
+  padding: 0 0.5rem;
+}
+
+/* ==============================
+   Underline Accent
+   ============================== */
+
+.input-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #3a9d78, #8dd5b0);
+  border-radius: 3px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field:focus ~ .input-line {
+  width: 100%;
+}
+
+/* ==============================
+   Submit Button
+   ============================== */
+
+.submit-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: linear-gradient(135deg, #b3e8d1, #8dd5b0);
+  color: #2e5e4c;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(58, 157, 120, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
+  margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.submit-btn:hover::before {
+  left: 100%;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #a0dfc3, #7ccaa1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58, 157, 120, 0.35);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ==============================
+   Close Button
+   ============================== */
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(92, 64, 51, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #5C4033;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background: rgba(92, 64, 51, 0.2);
+  color: #3d2a23;
+  transform: scale(1.1) rotate(90deg);
+}
+
+.close-btn:active {
+  transform: scale(0.95) rotate(90deg);
+}
+
+/* ==============================
+   Number Input
+   ============================== */
+
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
