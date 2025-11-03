@@ -1,0 +1,19 @@
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Document } from 'mongoose';
+
+@Schema({ timestamps: true })
+export class Weather extends Document {
+  @Prop({ required: true })
+  city: string;
+
+  @Prop({ required: true })
+  temperature: number;
+
+  @Prop({ required: true })
+  condition: string;
+
+  @Prop({ default: Date.now })
+  date: Date;
+}
+
+export const WeatherSchema = SchemaFactory.createForClass(Weather);
